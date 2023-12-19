@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/style/styles.css" />
+    <link rel="stylesheet" href="dist/style/media.css" />
+  </head>
+  <body>
+    <nav class="navbar wrapper">
+      <div class="logo">
+        <img src="dist/img/logo.png" alt="logo" />
+      </div>
+      <div class="hamburger-menu">
+        <button onclick="toggleMenu()">&#9776;</button>
+      </div>
+      <ul class="menu">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+
+        <li><a href="#Journal">Journal</a></li>
+        <li><a href="#Shop">Shop</a></li>
+        <li><a href="#Story">Story</a></li>
+        <li><a class="btn-gray">Buy Template</a></li>
+        <li>
+          <img src="dist/img/shop.svg" alt="shop" />
+          <span class="shop-count">0</span>
+        </li>
+      </ul>
+    </nav>
+    <header id="Home" class="mb-5 wrapper">
+      <div class="d-flex direction-column-sm mb-3">
+        <div
+          class="slider-description d-flex justify-content-end direction-column"
+        >
+          <h1>Shop hundreds of enamel pins from artists.</h1>
+          <div class="d-flex gap-10 text-center">
+            <a href="" class="bg-orange">Shop everything</a>
+            <a href="">Browse collections</a>
+          </div>
+        </div>
+        <div class="header-wrapper">
+          <div class="slider">
+            <div class="slide">
+              <img src="dist/img/banner_img.png" alt="" />
+            </div>
+            <div class="slide">
+              <img src="dist/img/banner_img2.jpeg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="dist/img/banner_img3.jpg" alt="banner_img3" />
+            </div>
+          </div>
+          <div class="dots"></div>
+        </div>
+      </div>
+
+      <div id="About" class="text-center mb-3">
+        <p class="text-sml text-orange">Ready, Set, Go</p>
+        <p class="w-sm-100 w-50 center text-lg">
+          Shop hundreds of enamel pins from artists. The best cool pin badges to
+          decorate your backpack, denim jean jacket, lapel, and festival hat for
+          sale in our online store.
+        </p>
+      </div>
+      <div class="flex-wrap gap-10 d-flex justify-content-center">
+        <div class="card">
+          <img src="dist/img/card1.png" alt="card1" />
+          <p>Free Artwork</p>
+          <span class="text-sml"
+            >Free digital proofs and best design advice</span
+          >
+        </div>
+        <div class="card">
+          <img src="dist/img/card1.png" alt="card1" />
+          <p>Lower Minimum</p>
+          <span class="text-sml">You can always start with 50 pcs here</span>
+        </div>
+        <div class="card">
+          <img src="dist/img/card1.png" alt="card1" />
+          <p>100% Guarantee</p>
+          <span class="text-sml">
+            Get excellent pins or have your money back
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <div id="Shop" class="shop mb-3 wrapper">
+      <div class="shop-wrapper">
+        <div class="card">
+          <img src="dist/img/shop_egg.png" alt="shop_egg" />
+        </div>
+        <div class="card">
+          <img src="dist/img/shop_boom.png" alt="shop_boom" />
+        </div>
+        <div class="card">
+          <img src="dist/img/shop_pineapple.png" alt="shop_pineapple" />
+        </div>
+      </div>
+
+      <div class="shop-details">
+        <div class="card">
+          <img src="dist/img/shop_all.png" alt="shop_all" />
+          <div class="text-overlay">
+            <a href="">Shop all</a>
+            <span>Explore everything</span>
+          </div>
+        </div>
+        <div class="card">
+          <img src="dist/img/browse_collection.png" alt="browse_collection" />
+          <div class="text-overlay">
+            <a href="">Browse collection</a>
+            <span>Get started</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Story" class="story py-5 text-center">
+      <div class="wrapper">
+        <h3>Get the rest of the story</h3>
+        <div class="d-flex gap-5 direction-column-sm mb-3">
+          <div class="card">
+            <img src="dist/img/story_img.png" alt="story_img" />
+          </div>
+          <div
+            class="card story-description direction-column d-flex justify-content-center align-center"
+          >
+            <p>
+              “Best templates and support out there! They are always happy to
+              help with any issues you may be having or even just showing how to
+              edit things.”
+            </p>
+            <span>Sam (Trustpilot)</span>
+          </div>
+        </div>
+
+        <div class="row-slider">
+          <div class="infinite-slider">
+            <div class="row-slide">
+              <img src="dist/img/cleo.png" alt="cleo" />
+              <p>“Great communication and help from him. Thank you.”</p>
+            </div>
+            <div class="row-slide">
+              <img src="dist/img/arial.png" alt="arial" />
+              <p>"Best templates & support out there!"</p>
+            </div>
+            <div class="row-slide">
+              <img src="dist/img/walden.png" alt="walden" />
+              <p>
+                “Fantastic designer and web developer... but above all great
+                people"
+              </p>
+            </div>
+            <div class="row-slide">
+              <img src="dist/img/petsplay.png" alt="petsplay" />
+              <p>“Great communication with detailed screen shots.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Journal" class="journal mb-3 wrapper">
+      <div
+        class="tab-content"
+        style="background-image: url(dist/img/journal_1.jpg)"
+      >
+        <div class="tab-content-description">
+          <p class="date">February 26, 2022</p>
+          <h5>14 Common Misconceptions About Web Design</h5>
+          <p class="description">
+            Laboriosam et a quis. Ut quae rem consequatur omnis autem incidunt
+            vitae. Recusandae voluptatem
+          </p>
+          <a href="">Read more</a>
+        </div>
+      </div>
+      <div>
+        <h3>Journal</h3>
+        <a href="" class="link">Read the latest &rarr;</a>
+        <div class="tabs">
+          <div class="tab">
+            <div class="tab-img">
+              <img src="dist/img/journal_1.jpg" alt="journal_1" />
+            </div>
+            <div class="tabs-description">
+              <p class="date">February 26, 2022</p>
+              <h5>14 Common Misconceptions About Web Design</h5>
+              <p class="description">
+                Laboriosam et a quis. Ut quae rem consequatur omnis autem
+                incidunt vitae. Recusandae voluptatem
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-img">
+              <img src="dist/img/journal_2.jpg" alt="journal_2" />
+            </div>
+            <div class="tabs-description">
+              <p class="date">February 26, 2022</p>
+              <h5>What Will Website Be Like In 100 Years?</h5>
+              <p class="description">
+                Ut aut natus consectetur est quam assumenda porro ut. Sit
+                blanditiis et.
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-img">
+              <img src="dist/img/journal_3.jpg" alt="journal_3" />
+            </div>
+            <div class="tabs-description">
+              <p class="date">February 26, 2022</p>
+              <h5>7 of the Best Examples of Beautiful Blog Design</h5>
+              <p class="description">
+                Ea in ad impedit repellat. Est iure iure et quis aut enim. Ipsam
+                temporibus culpa
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab-img">
+              <img src="dist/img/journal_4.jpg" alt="journal_4" />
+            </div>
+            <div class="tabs-description">
+              <p class="date">February 26, 2022</p>
+              <h5>7 Things About Web Design Your Boss Wants To Know</h5>
+              <p class="description">
+                Dignissimos iste voluptas reprehenderit mollitia nemo distinctio
+                assumenda sequi
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-gallery mb-3">
+        <h4>
+          Celebrating the <br />
+          perfectly imperfect
+        </h4>
+        <div class="d-flex">
+          <div style="background-image: url(dist/img/footer1.jpg)"></div>
+          <div style="background-image: url(dist/img/footer2.jpg)"></div>
+          <div style="background-image: url(dist/img/footer3.jpg)"></div>
+          <div style="background-image: url(dist/img/footer4.jpg)"></div>
+        </div>
+      </div>
+
+      <div class="footer-nav d-flex">
+        <ul>
+          <li class="title"><a href="">Shop</a></li>
+          <li><a href="">All products</a></li>
+          <li><a href="">Fruit</a></li>
+          <li><a href="">Custom</a></li>
+          <li><a href="">Cute</a></li>
+        </ul>
+
+        <ul>
+          <li class="title"><a href="">Learn</a></li>
+          <li><a href="">Home</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">About us</a></li>
+          <li><a href="">Journal</a></li>
+          <li><a class="contact-us">Contact us</a></li>
+        </ul>
+
+        <ul>
+          <li class="title"><a href="">Template</a></li>
+          <li><a href="">Style Guide</a></li>
+          <li><a href="">Instructions</a></li>
+          <li><a href="">Changelog</a></li>
+          <li><a href="">More Templates</a></li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        <span> © Pulstar powered by </span>
+      </div>
+    </footer>
+
+    <div class="modal">
+      <div class="modal-content">
+        <div>
+          <span class="close">&times;</span>
+        </div>
+        <form id="contactForm">
+          <div>
+            <label for="from_name">Email:</label>
+            <input type="email" id="from_name" name="from_name" required />
+          </div>
+          <div>
+            <label for="to_name">Subject:</label>
+            <input type="text" id="to_name" name="to_name" required />
+          </div>
+          <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <script src="dist/js/main.js"></script>
+ 
+</html>

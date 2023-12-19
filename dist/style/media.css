@@ -1,0 +1,111 @@
+@media only screen and (max-width: 768px) {
+
+    /* Стилі для мобільної версії */
+    .menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #f2f2f2;
+        padding: 10px 0;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .menu.show {
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: 100%;
+    }
+
+    .menu li {
+        padding: 5px 10px;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 8px 10px;
+        background-color: #ccc;
+        border-radius: 5px;
+        color: #333;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .hamburger-menu button {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .w-sm-100 {
+        width: 100% !important;
+    }
+
+    .direction-column-sm {
+        flex-direction: column !important;
+    }
+
+    .header-wrapper {
+        margin-top: 5px;
+    }
+
+    header .slider-description {
+        margin-top: 0;
+        max-width: 100%;
+    }
+
+    .slide {
+        width: 100vw;
+    }
+
+    .shop-wrapper, .shop-details {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .shop-wrapper .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .shop-details .card {
+        max-width: 421px;
+        min-width: 421px;
+    }
+
+    .story .card {
+        max-width: 100%;
+        /* Зробити картку на всю ширину на мобільних */
+    }
+
+    .story .d-flex {
+        align-items: center;
+    }
+
+    .journal {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .journal>div {
+        flex: 1;
+    }
+
+    .journal div.tab-content {
+        flex: 1 1 455px;
+        order: 2;
+    }
+
+}
