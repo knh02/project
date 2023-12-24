@@ -112,30 +112,30 @@ const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
       framesCount = 20;
 
 anchors.forEach(function(item) {
-  // каждому якорю присваиваем обработчик события
+  // кожному якорю присвоюємо обробник події
   item.addEventListener('click', function(e) {
-    // убираем стандартное поведение
+    // прибираємо стандартну поведінку
     e.preventDefault();
     
-    // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
+    // для кожного якоря беремо відповідний йому елемент і визначаємо його координату Y
     let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
     
-    // запускаем интервал, в котором
+    // запускаємо інтервал, у якому
     let scroller = setInterval(function() {
-      // считаем на сколько скроллить за 1 такт
+      // рахуємо на скільки скролити за 1 такт
       let scrollBy = coordY / framesCount;
       
-      // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
-      // и дно страницы не достигнуто
+      // якщо к-ть пікселів для скролу за 1 такт більша за відстань до елемента
+      // і дно сторінки не досягнуто
       if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-        // то скроллим на к-во пикселей, которое соответствует одному такту
+        // то скролимо на к-ть пікселів, яка відповідає одному такту
         window.scrollBy(0, scrollBy);
       } else {
-        // иначе добираемся до элемента и выходим из интервала
+        // інакше добираємося до елемента і виходимо з інтервалу
         window.scrollTo(0, coordY);
         clearInterval(scroller);
       }
-    // время интервала равняется частному от времени анимации и к-ва кадров
+    // час інтервалу дорівнює частці від часу анімації та кількості кадрів
     }, animationTime / framesCount);
   });
 });
