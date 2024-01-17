@@ -63,10 +63,20 @@
     header .slider-description {
         margin-top: 0;
         max-width: 100%;
+        padding: 20px 10px;
+    }
+
+    header .slider-description h1 {
+        margin-top: 0;
+    }
+
+    .header-wrapper .slider {
+        padding: 0 10px;
     }
 
     .slide {
-        width: 100vw;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .shop-wrapper, .shop-details {
@@ -80,13 +90,17 @@
         height: auto;
     }
 
-    .shop-details .card {
+    .shop-details .card, .story .card, .journal div.tab-content, .tab {
         max-width: 421px;
-        min-width: 421px;
+        /* min-width: 421px; */
+    }
+
+    .journal div.tab-content, .tab {
+        margin: 0 auto;
     }
 
     .story .card {
-        max-width: 100%;
+         max-width: 100%; 
         /* Зробити картку на всю ширину на мобільних */
     }
 

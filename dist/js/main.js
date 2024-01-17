@@ -56,15 +56,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const shopWrapper = document.querySelector(".shop-wrapper");
 
     shopWrapper.addEventListener("click", function (event) {
-        const clickedCard = event.target.closest(".card");
-        if (clickedCard) {
-            const allCards = shopWrapper.querySelectorAll(".card");
-            allCards.forEach(card => {
-                if (card !== clickedCard) {
-                    card.classList.remove("selected");
+        const clickedImg = event.target.closest(".card img");
+        if (clickedImg) {
+            const allImages = shopWrapper.querySelectorAll(".card img");
+            allImages.forEach(img => {
+                if (img !== clickedImg) {
+                    img.classList.remove("selected");
                 }
             });
-            clickedCard.classList.toggle("selected");
+            clickedImg.classList.toggle("selected");
         }
     });
 
@@ -107,37 +107,24 @@ carouselContent.forEach(item => {
 carouselInner.style.animation = "moveSlider 50s linear infinite";
 
 // Прокрутка до розділів після кліку на посилання у меню
-const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
-      animationTime = 300,
-      framesCount = 20;
+const menuLinks = document.querySelectorAll('.menu a');
 
-anchors.forEach(function(item) {
-  // кожному якорю присвоюємо обробник події
-  item.addEventListener('click', function(e) {
-    // прибираємо стандартну поведінку
-    e.preventDefault();
-    
-    // для кожного якоря беремо відповідний йому елемент і визначаємо його координату Y
-    let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
-    
-    // запускаємо інтервал, у якому
-    let scroller = setInterval(function() {
-      // рахуємо на скільки скролити за 1 такт
-      let scrollBy = coordY / framesCount;
-      
-      // якщо к-ть пікселів для скролу за 1 такт більша за відстань до елемента
-      // і дно сторінки не досягнуто
-      if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-        // то скролимо на к-ть пікселів, яка відповідає одному такту
-        window.scrollBy(0, scrollBy);
-      } else {
-        // інакше добираємося до елемента і виходимо з інтервалу
-        window.scrollTo(0, coordY);
-        clearInterval(scroller);
-      }
-    // час інтервалу дорівнює частці від часу анімації та кількості кадрів
-    }, animationTime / framesCount);
-  });
+menuLinks.forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+
+        if (targetSection) {
+            const offsetTop = targetSection.offsetTop;
+
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
 });
 
 

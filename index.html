@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="dist/style/media.css" />
   </head>
   <body>
-    <nav class="navbar wrapper">
+    <section class="navbar wrapper">
       <div class="logo">
         <img src="dist/img/logo.png" alt="logo" />
       </div>
       <div class="hamburger-menu">
         <button onclick="toggleMenu()">&#9776;</button>
       </div>
-      <ul class="menu">
+      <nav class="menu">
         <li><a href="#Home">Home</a></li>
         <li><a href="#About">About</a></li>
 
@@ -27,8 +27,8 @@
           <img src="dist/img/shop.svg" alt="shop" />
           <span class="shop-count">0</span>
         </li>
-      </ul>
-    </nav>
+      </nav>
+    </section>
     <header id="Home" class="mb-5 wrapper">
       <div class="d-flex direction-column-sm mb-3">
         <div
@@ -64,39 +64,54 @@
           sale in our online store.
         </p>
       </div>
-      <div class="flex-wrap gap-10 d-flex justify-content-center">
-        <div class="card">
+      <ul class="flex-wrap gap-10 d-flex justify-content-center">
+        <li class="card">
           <img src="dist/img/card1.png" alt="card1" />
           <p>Free Artwork</p>
           <span class="text-sml"
             >Free digital proofs and best design advice</span
           >
-        </div>
-        <div class="card">
+        </li>
+        <li class="card">
           <img src="dist/img/card1.png" alt="card1" />
           <p>Lower Minimum</p>
           <span class="text-sml">You can always start with 50 pcs here</span>
-        </div>
-        <div class="card">
+        </li>
+        <li class="card">
           <img src="dist/img/card1.png" alt="card1" />
           <p>100% Guarantee</p>
           <span class="text-sml">
             Get excellent pins or have your money back
           </span>
-        </div>
-      </div>
+        </li>
+      </ul>
     </header>
 
-    <div id="Shop" class="shop mb-3 wrapper">
+    <section id="Shop" class="shop mb-3 wrapper">
       <div class="shop-wrapper">
         <div class="card">
           <img src="dist/img/shop_egg.png" alt="shop_egg" />
+          <div class="d-flex shop-desc">
+            <span>Hard BOILED Egg and Avocado</span>
+            <div>
+              <span>$ 7.99 USD</span>
+              <span>$ 5.00 USD</span>
+            </div>
+          </div>
         </div>
         <div class="card">
           <img src="dist/img/shop_boom.png" alt="shop_boom" />
+          <div class="d-flex shop-desc">
+            <span>BOMB! Enamel Pin</span>
+            <span>$ 7.12 USD</span>
+          </div>
         </div>
         <div class="card">
           <img src="dist/img/shop_pineapple.png" alt="shop_pineapple" />
+          <div class="d-flex shop-desc">
+            <span>Pineapple Charm Pendant</span>
+            <span>$ 9.99 USD</span>
+          </div>
         </div>
       </div>
 
@@ -116,9 +131,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="Story" class="story py-5 text-center">
+    <section id="Story" class="story py-5 text-center">
       <div class="wrapper">
         <h3>Get the rest of the story</h3>
         <div class="d-flex gap-5 direction-column-sm mb-3">
@@ -161,9 +176,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="Journal" class="journal mb-3 wrapper">
+    <section id="Journal" class="journal mb-3 wrapper">
       <div
         class="tab-content"
         style="background-image: url(dist/img/journal_1.jpg)"
@@ -236,51 +251,57 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <footer>
-      <div class="footer-gallery mb-3">
-        <h4>
-          Celebrating the <br />
-          perfectly imperfect
-        </h4>
-        <div class="d-flex">
-          <div style="background-image: url(dist/img/footer1.jpg)"></div>
-          <div style="background-image: url(dist/img/footer2.jpg)"></div>
-          <div style="background-image: url(dist/img/footer3.jpg)"></div>
-          <div style="background-image: url(dist/img/footer4.jpg)"></div>
+      <div class="wrapper">
+        <div class="footer-gallery mb-3">
+          <h4>
+            Celebrating the <br />
+            perfectly imperfect
+          </h4>
+          <div class="d-flex">
+            <div style="background-image: url(dist/img/footer1.jpg)"></div>
+            <div style="background-image: url(dist/img/footer2.jpg)"></div>
+            <div style="background-image: url(dist/img/footer3.jpg)"></div>
+            <div style="background-image: url(dist/img/footer4.jpg)"></div>
+          </div>
         </div>
-      </div>
 
-      <div class="footer-nav d-flex">
-        <ul>
-          <li class="title"><a href="">Shop</a></li>
-          <li><a href="">All products</a></li>
-          <li><a href="">Fruit</a></li>
-          <li><a href="">Custom</a></li>
-          <li><a href="">Cute</a></li>
-        </ul>
+        <div class="footer-nav d-flex">
+          <div>
+            <h6 class="title">Shop</h6>
+            <ul>
+              <li><a href="">All products</a></li>
+              <li><a href="">Fruit</a></li>
+              <li><a href="">Custom</a></li>
+              <li><a href="">Cute</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="title">Learn</h6>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Shop</a></li>
+              <li><a href="">About us</a></li>
+              <li><a href="">Journal</a></li>
+              <li><a class="contact-us">Contact us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="title">Template</h6>
+            <ul>
+              <li><a href="">Style Guide</a></li>
+              <li><a href="">Instructions</a></li>
+              <li><a href="">Changelog</a></li>
+              <li><a href="">More Templates</a></li>
+            </ul>
+          </div>
+        </div>
 
-        <ul>
-          <li class="title"><a href="">Learn</a></li>
-          <li><a href="">Home</a></li>
-          <li><a href="">Shop</a></li>
-          <li><a href="">About us</a></li>
-          <li><a href="">Journal</a></li>
-          <li><a class="contact-us">Contact us</a></li>
-        </ul>
-
-        <ul>
-          <li class="title"><a href="">Template</a></li>
-          <li><a href="">Style Guide</a></li>
-          <li><a href="">Instructions</a></li>
-          <li><a href="">Changelog</a></li>
-          <li><a href="">More Templates</a></li>
-        </ul>
-      </div>
-
-      <div class="copyright">
-        <span> © Pulstar powered by </span>
+        <div class="copyright">
+          <span> © Pulstar powered by </span>
+        </div>
       </div>
     </footer>
 
@@ -310,5 +331,9 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
   <script src="dist/js/main.js"></script>
- 
+  <ul>
+    <div>
+      
+    </div>
+  </ul>
 </html>
